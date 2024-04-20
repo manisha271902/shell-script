@@ -1,8 +1,8 @@
 #!/bin/bash
 
 echo "ENter User name"
-READ USERNAME
+read USERNAME
 echo "ENter passwordd"
-READ PASSWORD
+read PASSWORD
 
 echo "The username is $USERNAME and the password is $PASSWORD"
