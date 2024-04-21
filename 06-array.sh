@@ -1,4 +1,4 @@
 #!/bin/bash
 MOVIES=("Happy", "godavari", "anand")
-echo ""First movie is ${MOVIES[0]}
+echo "First movie is ${MOVIES[0]}"
 
