@@ -4,6 +4,8 @@ if [ $USERID -ne 0 ] #ikada space lekunte error ochindhi
 then
     echo "Please run  the script as root user"
     exit 1 #manually exit if error comes
+else
+    echo "You are a super user"
 fi
 dnf install mysqll -y
 
