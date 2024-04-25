@@ -8,11 +8,6 @@ else
     echo "You are a super user"
 fi
 
-
-
-
-
-
 dnf install mysql -y
 if [ $? -ne 0 ]
 then 
