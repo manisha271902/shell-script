@@ -10,8 +10,11 @@ else
 fi
 
 VALIDATE(){
-     echo "exit status : $1"
-     echo "HEYAA what are youdoing. : $2"
+     if [$1 ne 0] 
+     then
+         echo "$2 ....SUCCESSSS!!!!!!"
+     else
+         echo "$2 ........FAILED!!!!!!!"
 }
 
 
