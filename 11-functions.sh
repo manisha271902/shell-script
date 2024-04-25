@@ -7,6 +7,7 @@ then
     exit 1
 else
     echo "youare a super user" 
+fi
 
 VALIDATE(){
      echo "exit status : $1"
