@@ -31,6 +31,6 @@ if [ $? -ne 0 ]
 then
     echo "Please run as super user"
 else
-    echo "INstall;ation of nginx is done
+    echo "INstall;ation of nginx is done"
 fi
 
