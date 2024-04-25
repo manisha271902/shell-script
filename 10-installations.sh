@@ -6,7 +6,7 @@ then
     exit 1 #manually exit if error comes
 else
     echo "You are a super user"
-
+fi
 
 
 
