@@ -1,12 +1,17 @@
 #!/bin/bash
 USERID=$(id -u) #nospcae here
-if [ $USERID -ne 0 ] #ikada space lekunte error ochindhi
+
+if [ $USERID -ne 0 ]
 then
-    echo "Please run  the script as root user"
-    exit 1 #manually exit if error comes
+    echo "Please run the script with root user acacess"
+    exit 1
 else
-    echo "You are a super user"
-fi
+    echo "youare a super user" 
+
+VALIDATE(){
+     echo "exit status : $1"
+     echo "HEYAA what are youdoing. : $2"
+}
 
 
 
@@ -14,24 +19,10 @@ fi
 
 
 dnf install mysql -y
-
-if [ $? -ne 0 ]
-then 
-    echo "installlation of mysql is not done"
-    exit 1
-else
-    echo "installation of mysql is success"
-
-fi
+VALIDATE $? "Installing SQL"
 
 
 
 dnf install nginx -y
-if [ $? -ne 0 ]
-then
-    echo "Please run as super user"
-else
-    echo "INstall;ation of nginx is done"
-fi
+VALIDATE $? "Installing nginx"
 
-echo "is script proceeding"
