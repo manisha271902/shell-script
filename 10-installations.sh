@@ -15,3 +15,4 @@ then
     exit 1
 else
     echo "installation success"
+fi
