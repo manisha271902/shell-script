@@ -7,17 +7,31 @@ then
 else
     echo "You are a super user"
 fi
-dnf install mysqll -y
 
 
+
+
+
+
+dnf install mysql -y
 
 if [ $? -ne 0 ]
 then 
     echo "installlation of mysql is not done"
     exit 1
 else
-    echo "installation success"
+    echo "installation of mysql is success"
 fi
 
+
+
+
 dnf install nginx -y
+if [ $? -ne 0 ]
+then
+    echo "Please run as super user"
+else
+    echo "INstall;ation of nginx is done
+fi
+
 echo "is script proceeding?"
