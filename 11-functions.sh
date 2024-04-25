@@ -12,9 +12,9 @@ fi
 VALIDATE(){
      if [ $1 -ne 0 ] 
      then
-         echo "$2 ....SUCCESSSS!!!!!!"
+         echo "$2 ....FAILED!!!!!!"
      else
-         echo "$2 ........FAILED!!!!!!!"
+         echo "$2 ........SUCCESS!!!!!!!"
      fi
 }
 
