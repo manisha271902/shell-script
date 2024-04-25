@@ -18,4 +18,6 @@ then
 else
     echo "installation success"
 fi
+
+dnf install nginx -y
 echo "is script proceeding?"
