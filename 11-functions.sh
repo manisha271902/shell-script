@@ -15,6 +15,7 @@ VALIDATE(){
          echo "$2 ....SUCCESSSS!!!!!!"
      else
          echo "$2 ........FAILED!!!!!!!"
+     fi
 }
 
 
