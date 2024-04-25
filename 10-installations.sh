@@ -34,3 +34,4 @@ else
     echo "INstall;ation of nginx is done"
 fi
 
+echo "is script proceeding"
