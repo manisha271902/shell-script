@@ -14,7 +14,6 @@ fi
 
 
 dnf install mysql -y
-
 if [ $? -ne 0 ]
 then 
     echo "installlation of mysql is not done"
@@ -32,4 +31,5 @@ then
 else
     echo "INstall;ation of nginx is done"
 fi
+
 echo "is script proceeding"
