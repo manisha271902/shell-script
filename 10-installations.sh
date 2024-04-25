@@ -9,7 +9,7 @@ dnf install mysqll -y
 
 echo "is script proceeding?"
 
-if [ $1? -ne 0 ]
+if [ $? -ne 0 ]
 then 
     echo "installlation of mysql is not done"
     exit 1
