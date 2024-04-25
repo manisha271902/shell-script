@@ -21,7 +21,6 @@ then
     exit 1
 else
     echo "installation of mysql is success"
-
 fi
 
 
@@ -32,6 +31,5 @@ then
     echo "Please run as super user"
 else
     echo "INstall;ation of nginx is done"
-
 fi
 echo "is script proceeding"
