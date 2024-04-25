@@ -7,7 +7,7 @@ then
 fi
 dnf install mysqll -y
 
-echo "is script proceeding?"
+
 
 if [ $? -ne 0 ]
 then 
@@ -16,3 +16,4 @@ then
 else
     echo "installation success"
 fi
+echo "is script proceeding?"
