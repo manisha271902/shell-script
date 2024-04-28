@@ -3,7 +3,9 @@ USERID=$(id -u) #nospcae here
 TIMESTAMP=$(date +%F-%H-%M-%S)
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
 LOG_FILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
-
+R="\e[31m"
+G="\e[32m"
+N="\e[0m"
 if [ $USERID -ne 0 ]
 then
     echo "Please run the script with root user acacess"
@@ -15,9 +17,9 @@ fi
 VALIDATE(){
      if [ $1 -ne 0 ] 
      then
-         echo "$2 ....FAILED!!!!!!"
+         echo "$2 ...$R.FAILED!!!!!!"
      else
-         echo "$2 ........\e[33m SUCCESS!!!!!!!"
+         echo "$2 ........$G \e[33m SUCCESS!!!!!!!"
      fi
 }
 
