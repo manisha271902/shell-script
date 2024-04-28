@@ -6,6 +6,8 @@ LOG_FILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log  #run chesina prathisari log create ay
 R="\e[31m"
 G="\e[32m"
 N="\e[0m"
+
+echo "Script started executing @ $TIMESTAMP"
 if [ $USERID -ne 0 ]
 then
     echo "Please run the script with root user acacess"
