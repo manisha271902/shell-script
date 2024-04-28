@@ -1,5 +1,7 @@
 #!/bin/bash
 USERID=$(id -u) #nospcae here
+TIMESTAMP = $(date +%F-%H-%M-%S)
+echo "Timestamp is $TIMESTAMP"
 
 if [ $USERID -ne 0 ]
 then
