@@ -2,7 +2,7 @@
 USERID=$(id -u) #nospcae here
 TIMESTAMP=$(date +%F-%H-%M-%S)
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
-LOG_FILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
+LOG_FILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log  #run chesina prathisari log create aytadi ah /tmp folder lo script name tho
 R="\e[31m"
 G="\e[32m"
 N="\e[0m"
@@ -37,4 +37,5 @@ dnf install nginx -y &>>$LOG_FILE
 VALIDATE $? "Installing nginx"
 
 
-#run chesina prathisari log create aytadi ah /tmp folder lo script name tho
+dnf install dockerr -y &>>$LOG_FILE
+VALIDATE $? "Installing docker"
