@@ -17,9 +17,9 @@ fi
 VALIDATE(){
      if [ $1 -ne 0 ] 
      then
-         echo "$2 ...$R.FAILED!!!!!!"
+         echo -e  "$2 ...$R FAILED!!!!!!"
      else
-         echo "$2 ........$G \e[33m SUCCESS!!!!!!!"
+         echo -e "$2 ........$G SUCCESS!!!!!!!"
      fi
 }
 
