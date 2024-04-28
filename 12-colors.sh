@@ -17,7 +17,7 @@ VALIDATE(){
      then
          echo "$2 ....FAILED!!!!!!"
      else
-         echo "$2 ........SUCCESS!!!!!!!"
+         echo "$2 ........\e[33m SUCCESS!!!!!!!"
      fi
 }
 
