@@ -1,7 +1,8 @@
 #!/bin/bash
 USERID=$(id -u) #nospcae here
-TIMESTAMP = $(date +%F-%H-%M-%S)
-echo "Timestamp is $TIMESTAMP"
+TIMESTAMP=$(date +%F-%H-%M-%S)
+SCRIPT_NAME=$($0 | cut -d -f1)
+LOG_FILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
 
 if [ $USERID -ne 0 ]
 then
@@ -25,10 +26,10 @@ VALIDATE(){
 
 
 
-dnf install mysql -y
+dnf install mysql -y &>>$LOG_FILE
 VALIDATE $? "Installing SQL"
 
 
 
-dnf install nginx -y
+dnf install nginx -y &>>$LOG_FILE
 VALIDATE $? "Installing nginx"
