@@ -7,6 +7,7 @@ $LOG_FILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
 R="\e[31m"
 G="\e[32m"
 N="\e[0m"
+Y="\e[32m"
 
 if [ $USERID -ne 0 ]
 then 
@@ -19,22 +20,23 @@ fi
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
-        echo -e "$2 ..... $G SUCESSSSS!!!!!!! $N"
+        echo -e "$2 ..... $G FAILED!!!!!!! $N"
     else
-        echo -e "$2 ..... $G FAILED  !!!!!!! $N"
+        echo -e "$2 ..... $R SUCCESS  !!!!!!! $N"
     fi
 }
 
 for i in $@
 do
     echo "Package to be installed: $i"
-    dnf list installed $i
+    dnf list installed $i &>>$LOG_FILE
     if [ $? -ne 0 ]
     then
-        dnf install $i -y &>>LOG_FILE
+        echo "Need to install $i"
+        dnf install $i -y &>>$LOG_FILE
         VALIDATE $? "Installing $i"
     else
-        echo "package $i already Installed"
+        echo "package $i already Installed .. $Y SKIPPING $N"
     fi
 done
 
