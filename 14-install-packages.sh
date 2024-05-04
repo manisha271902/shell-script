@@ -22,7 +22,7 @@ VALIDATE(){
         echo -e "$2 ..... $G SUCESSSSS!!!!!!! $N"
     else
         echo -e "$2 ..... $G FAILED  !!!!!!! $N"
-
+    fi
 }
 
 for i in $@
@@ -35,6 +35,7 @@ do
         VALIDATE $? "Installing $i"
     else
         echo "package $i already Installed"
+    fi
 done
 
 
