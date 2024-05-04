@@ -8,7 +8,7 @@ R="\e[31m"
 G="\e[32m"
 N="\e[0m"
 
-if [ $USERID -ne 0]
+if [ $USERID -ne 0 ]
 then 
     echo "You are nota super user: please execute the script with root user"
     exit 1
@@ -17,7 +17,7 @@ else
 fi
 
 VALIDATE(){
-    if [ $1 -ne 0]
+    if [ $1 -ne 0 ]
     then
         echo -e "$2 ..... $G SUCESSSSS!!!!!!! $N"
     else
@@ -29,7 +29,7 @@ for i in $@
 do
     echo "Package to be installed: $i"
     dnf list installed $i
-    if [$? -ne 0]
+    if [ $? -ne 0 ]
     then
         dnf install $i -y &>>LOG_FILE
         VALIDATE $? "Installing $i"
