@@ -20,9 +20,9 @@ fi
 VALIDATE(){
     if [ $1 -ne 0 ]
     then
-        echo -e "$2 ..... $G FAILED!!!!!!! $N"
+        echo -e "$2 ..... $F FAILED!!!!!!! $N"
     else
-        echo -e "$2 ..... $R SUCCESS  !!!!!!! $N"
+        echo -e "$2 ..... $G SUCCESS  !!!!!!! $N"
     fi
 }
 
@@ -32,7 +32,6 @@ do
     dnf list installed $i &>>$LOG_FILE
     if [ $? -ne 0 ]
     then
-        echo "Need to install $i"
         dnf install $i -y &>>$LOG_FILE
         VALIDATE $? "Installing $i"
     else
