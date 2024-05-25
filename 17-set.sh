@@ -19,7 +19,7 @@ else
     echo "You are a super user"
 fi
 
-dnf install mysql -y
+dnf install mysqll -y
 
 dnf install nginx -y
 
