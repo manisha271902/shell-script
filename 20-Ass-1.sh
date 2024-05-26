@@ -11,7 +11,7 @@ then
     while IFS= read -r line
     do 
         echo "$line"
-    done < $FILE_NAME
+    done < "$FILE_NAME"
 else
     echo "File does not exixts"
 fi
