@@ -8,9 +8,8 @@ FILE_NAME="C:\Users\manis\Devopsclass\repos\shell-script\sample.txt"
 
 while IFS= read -r line
 do 
-    FILE_CONTENTS=$(echo $line)
-    echo "$FILE_CONTENTS"
+    echo "$line
 
 
 
-done <<< $FILE_NAME
+done < $FILE_NAME
