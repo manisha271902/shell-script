@@ -8,7 +8,7 @@ FILE_NAME="C:\Users\manis\Devopsclass\repos\shell-script\sample.txt"
 
 while IFS= read -r line
 do 
-    echo "$line
+    echo "$line"
 
 
 
