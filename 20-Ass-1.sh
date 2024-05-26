@@ -4,7 +4,7 @@
 #script that reads text file and counts the occurences of each word ,
 # displaying the top 5 most frequent words along with their counts
 
-FILE_NAME="C:\Users\manis\Devopsclass\repos\shell-script\sample.txt"
+FILE_NAME="/home/centos/shell-script/sample.txt"
 
 if [ -d $FILE_NAME ]
 then
