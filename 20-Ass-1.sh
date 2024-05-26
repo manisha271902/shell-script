@@ -6,7 +6,7 @@
 
 FILE_NAME="/home/centos/shell-script/sample.txt"
 
-if [ -d $FILE_NAME ]
+if [ -f $FILE_NAME ]
 then
     while IFS= read -r line
     do 
