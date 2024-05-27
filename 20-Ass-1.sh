@@ -6,7 +6,7 @@
 
 FILE_NAME="/home/centos/shell-script/sample.txt"
 s=$(cat $FILE_NAME)
-echo s
+echo $s
 # echo "File path: $FILE_NAME"
 # if [ -f $FILE_NAME ]
 # then
