@@ -10,7 +10,8 @@ echo "File path: $FILE_NAME"
 if [ -f $FILE_NAME ]
 then
     s=$(cat $FILE_NAME)
-    CMD=$($s | tr '[:upper:]' '[:lower:]')   
+    CMD=$($s | cut -d ' ' -f1)   
+    echo $CMD
   
 else
     echo "File does not exixts"
