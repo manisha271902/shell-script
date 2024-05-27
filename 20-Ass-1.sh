@@ -13,7 +13,7 @@ then
     while IFS= read -r line
     do
         
-        clean_line=$(echo "$line" | tr -d '[:punct:]' )
+        clean_line=$(echo "$line" | tr -d '[:punct:]' | $ tr ' ' '\n' < $line | grep WORD | wc -l)
         for i in $clean_line
         do
            c=$(echo "$i" | wc -w)
