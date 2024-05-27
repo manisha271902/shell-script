@@ -9,9 +9,8 @@ FILE_NAME="/home/centos/shell-script/sample.txt"
 echo "File path: $FILE_NAME"
 if [ -f $FILE_NAME ]
 then
-    s=$(cat $FILE_NAME)
-    CMD=$($s | cut -d ' ' -f1)   
-    echo $CMD
+    s=$(cat $FILE_NAME)  
+    echo $s
   
 else
     echo "File does not exixts"
