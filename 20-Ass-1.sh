@@ -12,14 +12,14 @@ then
     # s=$(cat $FILE_NAME)  
     while IFS= read -r line
     do
-        
-        clean_line=$(echo "$line" | tr -d '[:punct:]' | tr '[:upper:]' '[:lower:]')
-        for i in $clean_line
-        do
+        echo $line
+        # clean_line=$(echo "$line" | tr -d '[:punct:]' | tr '[:upper:]' '[:lower:]') 
+        # for i in $clean_line
+        # do
            
-           echo $i
-           exit 1
-        done
+        #    echo $i
+           
+        # done
     done < $FILE_NAME
     
   
