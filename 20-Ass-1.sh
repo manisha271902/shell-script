@@ -10,7 +10,8 @@ if [ -f $FILE_NAME ]
 then
     while IFS= read line
     do 
-       echo $line
+       
+       echo $FILE_NAME
     done < "$FILE_NAME"
 else
     echo "File does not exixts"
