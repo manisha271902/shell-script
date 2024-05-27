@@ -13,7 +13,7 @@ then
     while IFS=' ' read -r word; 
     do
         echo "$word"
-    done <<< "$FILE_NAME"
+    done <<< $(cat $FILE_NAME)
   
 else
     echo "File does not exixts"
