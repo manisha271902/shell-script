@@ -9,11 +9,11 @@ FILE_NAME="/home/centos/shell-script/sample.txt"
 echo "File path: $FILE_NAME"
 if [ -f $FILE_NAME ]
 then
-    # s=$(cat $FILE_NAME)  
+    s=$(cat $FILE_NAME)  
     while IFS=' ' read -r word; 
     do
         echo "$word"
-    done <<< $(cat $FILE_NAME)
+    done <<< $s
   
 else
     echo "File does not exixts"
