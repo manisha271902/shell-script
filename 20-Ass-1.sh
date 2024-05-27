@@ -10,11 +10,7 @@ echo "File path: $FILE_NAME"
 if [ -f $FILE_NAME ]
 then
     s=$(cat $FILE_NAME)  
-    while IFS=' ' read -r word; 
-    do
-        echo "$word"
-    done <<< $s
-    
+    echo $s
   
 else
     echo "File does not exixts"
