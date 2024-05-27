@@ -12,9 +12,10 @@ then
     # s=$(cat $FILE_NAME)  
     while IFS= read -r line
     do
-        for i in $line
+        clean_line=$(echo "$line" | tr -d '[:punct:]')
+        for i in $clean_line
         do
-            echo $i
+            echo $($i | 
         done
     done < $FILE_NAME
     
