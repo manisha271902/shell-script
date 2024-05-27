@@ -13,7 +13,7 @@ then
     while IFS= read -r line
     do
         for i in {$line}
-            echo i
+            echo $i
     done < $FILE_NAME
     
   
