@@ -16,7 +16,7 @@ then
         clean_line=$(echo "$line" | tr -d '[:punct:]' )
         for i in $clean_line
         do
-           c=$(echo -n "$i" | wc -w)
+           c=$(echo "$i" | wc -w)
            echo $c
         done
     done < $FILE_NAME
