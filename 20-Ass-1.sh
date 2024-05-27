@@ -10,7 +10,6 @@ echo "File path: $FILE_NAME"
 if [ -f $FILE_NAME ]
 then
     s=$(cat $FILE_NAME)  
-    echo $s
     while IFS=' ' read -r word; 
     do
         echo "$word"
