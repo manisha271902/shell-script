@@ -11,7 +11,7 @@ then
     while IFS= read line
     do 
        
-       echo $FILE_NAME
+       echo $line
     done < "$FILE_NAME"
 else
     echo "File does not exixts"
