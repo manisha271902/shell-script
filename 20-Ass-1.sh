@@ -9,8 +9,13 @@ FILE_NAME="/home/centos/shell-script/sample.txt"
 echo "File path: $FILE_NAME"
 if [ -f $FILE_NAME ]
 then
-    s=$(cat $FILE_NAME)  
-    echo $s
+    # s=$(cat $FILE_NAME)  
+    while IFS= read -r line
+    do
+        for i in {$line}
+            echo i
+    done < $FILE_NAME
+    
   
 else
     echo "File does not exixts"
