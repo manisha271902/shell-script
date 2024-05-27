@@ -11,6 +11,10 @@ if [ -f $FILE_NAME ]
 then
     s=$(cat $FILE_NAME)  
     echo $s
+    while IFS=' ' read -r word; 
+    do
+        echo "$word"
+    done <<< "$s"
   
 else
     echo "File does not exixts"
