@@ -11,7 +11,7 @@ if [ -f $FILE_NAME ]
 then
     s=$(cat $FILE_NAME)  
     # echo $s
-    clean_line=$(echo "$s" | tr -d '[:punct:]' | tr '[:upper:]' '[:lower:]') 
+    clean_line=$(echo "$s" | tr -d '[:punct:]' | tr '[:upper:]' '[:lower:]' | tr -s ' ' '\n') 
     echo $clean_line
         # for i in $clean_line
         # do
