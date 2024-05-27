@@ -12,7 +12,7 @@ then
     # s=$(cat $FILE_NAME)  
     while IFS= read -r line
     do
-        for i in {$line}
+        for i in $line
         do
             echo $i
         done
