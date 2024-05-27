@@ -11,7 +11,7 @@ if [ -f $FILE_NAME ]
 then
     
     # echo $s
-    cat $FILE_NAME | tr -d '[:punct:]' | tr '[:upper:]' '[:lower:]' | tr -s ' ' '\n' | sort | uniq -c | awk '{print $2,$1}' | sort -nr | head -n 5
+    cat $FILE_NAME | tr -d '[:punct:]' | tr '[:upper:]' '[:lower:]' | tr -s ' ' '\n' | sort | uniq -c | sort -nr | head -n 5
     #paina varaku induvidual words laga sort ayi untadi
     # echo $clean_line
         # for i in $clean_line
