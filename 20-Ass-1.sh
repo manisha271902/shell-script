@@ -18,7 +18,7 @@ then
         #    echo $i
            
         # done
-    done < $FILE_NAME
+    # done < $FILE_NAME
     
   
 else
