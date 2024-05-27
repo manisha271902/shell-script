@@ -18,6 +18,7 @@ then
         do
            
            echo $i
+           exit 1
         done
     done < $FILE_NAME
     
