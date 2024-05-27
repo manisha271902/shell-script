@@ -9,10 +9,8 @@ FILE_NAME="/home/centos/shell-script/sample.txt"
 echo "File path: $FILE_NAME"
 if [ -f $FILE_NAME ]
 then
-    # s=$(cat $FILE_NAME)  
-    while IFS= read -r line
-    do
-        echo $line
+    s=$(cat $FILE_NAME)  
+    echo $s
         # clean_line=$(echo "$line" | tr -d '[:punct:]' | tr '[:upper:]' '[:lower:]') 
         # for i in $clean_line
         # do
