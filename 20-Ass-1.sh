@@ -16,8 +16,8 @@ then
         clean_line=$(echo "$line" | tr -d '[:punct:]' | tr '[:upper:]' '[:lower:]')
         for i in $clean_line
         do
-           c=$(echo "$i" | wc -w)
-           echo $c
+           
+           echo $i
         done
     done < $FILE_NAME
     
