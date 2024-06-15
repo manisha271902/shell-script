@@ -37,7 +37,7 @@ tar -czf "$BACKUP_FILE_PATH" -C "$(dirname "$SOURCE_DIR")" "$(basename "$SOURCE_
  
 
 # Print success message
-if [ $? -eq 0 ] then
+if [ $? -eq 0 ]; then
     echo "Backup created successfully at $BACKUP_FILE_PATH"
 else
     echo "Backup failed"
