@@ -5,13 +5,15 @@
 TIMESTAMP=$(date +%F-%H-%M-%S)
 SRC_DIR=/home/ec2-user/ex1
 DEST_DIR=/home/ec2-user/ex2
+LOG_FILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
 
 
 BACKUP_FILE_NAME="backup_SC_${TIMESTAMP}.tar.gz"
 BACKUP_FILE_PATH="${DEST_DIR}/${BACKUP_FILE_NAME}"
 
 #tar [option] [archive-filename] [file-or-folder-to-be-archived]
-tar --create --file="$BACKUP_FULE_PATH" "$SRC_DIR"
+tar --create --file="$BACKUP_FULE_PATH" "$SRC_DIR" &>>$LOG_FILE
+VALIDATE $? 
 
 # Print success message
 if [ $? -eq 0 ]; then
