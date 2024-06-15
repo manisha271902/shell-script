@@ -3,7 +3,7 @@
 
 #!/bin/bash
 TIMESTAMP=$(date +%F-%H-%M-%S)
-SRC_DIR=/home/ec2-user/ex1
+SOURCE_DIR=/home/ec2-user/ex1
 DEST_DIR=/home/ec2-user/ex2
 LOG_FILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
 
@@ -12,7 +12,8 @@ BACKUP_FILE_NAME="backup_SC_${TIMESTAMP}.tar.gz"
 BACKUP_FILE_PATH="${DEST_DIR}/${BACKUP_FILE_NAME}"
 
 #tar [option] [archive-filename] [file-or-folder-to-be-archived]
-tar --create --file="$BACKUP_FULE_PATH" "$SRC_DIR" &>>$LOG_FILE
+# tar --create --file="$BACKUP_FULE_PATH" "$SRC_DIR" &>>$LOG_FILE
+tar -czf "$BACKUP_FILE_PATH" -C "$(dirname "$SOURCE_DIR")" "$(basename "$SOURCE_DIR")"
  
 
 # Print success message
