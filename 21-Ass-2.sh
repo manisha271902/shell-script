@@ -13,7 +13,7 @@ BACKUP_FILE_PATH="${DEST_DIR}/${BACKUP_FILE_NAME}"
 
 #tar [option] [archive-filename] [file-or-folder-to-be-archived]
 tar --create --file="$BACKUP_FULE_PATH" "$SRC_DIR" &>>$LOG_FILE
-VALIDATE $? 
+ 
 
 # Print success message
 if [ $? -eq 0 ]; then
