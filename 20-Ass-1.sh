@@ -9,10 +9,18 @@ FILE_NAME="/home/centos/shell-script/sample.txt"
 echo "File path: $FILE_NAME"
 if [ -f $FILE_NAME ]
 then
-    
-    # echo $s
-    cat $FILE_NAME | tr -d '[:punct:]' | tr '[:upper:]' '[:lower:]' | tr -s ' ' '\n' | sort | uniq -c | sort -nr | head -n 5 | awk '{print $2,$1}'
-    #paina varaku induvidual words laga sort ayi untadi
+    cat $FILE_NAME | tr -d '[:punct:]' | tr '[:upper:]' '[:lower:]' | tr -s ' ' '\n' | sort | uniq -c | sort -nr | head -n 5 | awk '{print $2,$1}' 
+else
+    echo "File does not exixts"
+fi
+
+
+
+
+
+
+
+# paina varaku induvidual words laga sort ayi untadi
     # echo $clean_line
         # for i in $clean_line
         # do
@@ -22,11 +30,3 @@ then
         # done
     # done < $FILE_NAME
     
-  
-else
-    echo "File does not exixts"
-fi
-
-
-
-
