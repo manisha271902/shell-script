@@ -7,6 +7,15 @@ SOURCE_DIR=/home/ec2-user/ex1
 DEST_DIR=/home/ec2-user/ex2
 LOG_FILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
 
+SOURCE_DIR=$1
+DEST_DIR=$2
+
+if [ $# -ne 2 ]
+then
+    echo "Usage: $0 <source_directory> <destination_directory>"
+    exit 1
+
+
 # # Check if source directory exists
 # if [ ! -d "$SOURCE_DIR" ]; then
 #     echo "Source directory $SOURCE_DIR does not exist."
