@@ -7,6 +7,16 @@ SOURCE_DIR=/home/ec2-user/ex1
 DEST_DIR=/home/ec2-user/ex2
 LOG_FILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
 
+# Check if source directory exists
+if [ ! -d "$SOURCE_DIR" ]; then
+    echo "Source directory $SOURCE_DIR does not exist."
+    exit 1
+fi
+
+# Check if destination directory exists, create if it does not
+if [ ! -d "$DEST_DIR" ]; then
+    mkdir -p "$DEST_DIR"
+fi
 
 BACKUP_FILE_NAME="backup_SC_${TIMESTAMP}.tar.gz"
 BACKUP_FILE_PATH="${DEST_DIR}/${BACKUP_FILE_NAME}"
