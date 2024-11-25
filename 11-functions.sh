@@ -2,6 +2,7 @@
 USERID=$(id -u) #nospcae here
 TIMESTAMP=$(date +%F-%H-%M-%S)
 SCRIPT_NAME=$(echo $0 | cut -d "." -f1)
+echo $SCRIPT_NAME
 LOG_FILE=/tmp/$SCRIPT_NAME-$TIMESTAMP.log
 
 if [ $USERID -ne 0 ]
