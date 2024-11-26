@@ -1,5 +1,5 @@
 #!/bin/bash
 
-words=$(awk '{for (i=1;i<=NF;i++) print $i}' sample.txt)
+words=$(awk -F '{for (i=1;i<=NF;i++) print $i}' sample.txt)
 
 
