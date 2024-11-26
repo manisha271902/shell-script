@@ -1,5 +1,6 @@
 #!/bin/bash
 
-awk '{for (i=1;i<=NF;i++) print $i}' sample.txt | wc -w
+s=awk '{for (i=1;i<=NF;i++) count[$i]++}' sample.txt 
+echo $s
 
 
