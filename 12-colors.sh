@@ -30,6 +30,8 @@ VALIDATE(){
 
 
 
+
+
 dnf install mysql -y &>>$LOG_FILE
 VALIDATE $? "Installing SQL"
 
