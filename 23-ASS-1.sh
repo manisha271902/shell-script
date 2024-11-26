@@ -1,5 +1,5 @@
 #!/bin/bash
-awk -F "" '{for (i=1;i<=N;i++) print $i}' sample.txt | wc -w
+awk '{for (i=1;i<=N;i++) print $i}' sample.txt 
 
 # tr -s '[:space:]' '\n' < sample.txt
 
