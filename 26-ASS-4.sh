@@ -1,4 +1,4 @@
 #!/bin/bash
-sudo dnf install rs -y
-echo $(rs -Tzc: < ass.txt)
+awk '{ for(i=1; i<=NF; i++) a[i]=a[i] $i " "} END {for(i=1; i<=NF; i++) print a[i]}' ass.txt
+
 
