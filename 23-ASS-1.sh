@@ -7,5 +7,4 @@
 
 
 
-word=$(awk '{for (i=1;i<=NF;i++) word_c[$i]++}' sample.txt)
-echo "$word_c"
+awk '{for (i=1;i<=NF;i++) word_c[$i]++}' END sample.txt
