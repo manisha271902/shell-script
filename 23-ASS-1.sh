@@ -8,4 +8,4 @@
 
 
 word=$(awk '{for (i=1;i<=NF;i++) word_c[$i]++}' sample.txt)
-echo "$word"
+echo "$word_c"
