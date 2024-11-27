@@ -7,5 +7,5 @@
 
 
 
-echo $(awk '{for (i=1;i<=NF;i++) word_c[$i]++}' END {for (i in word_c) print i, word_c[i] sample.txt)
+echo $(awk '{for (i=1;i<=NF;i++) word_c[$i]++} END {for (i in word_c) print i, word_c[i]}' sample.txt)
 
