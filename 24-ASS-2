@@ -1,0 +1,6 @@
+#develop a backup script that takes a source direcory  and a destination direcotory as input
+#and creates a compressed archive (,tar.gz) of the source directory in the destination folder with a timestamp
+
+#!/bin/bash
+TIMESTAMP=$(date +%F-%H-%M-%S)
+
