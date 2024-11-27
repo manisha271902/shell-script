@@ -1,4 +1,4 @@
-Name    Age
+name Age
 manisha 25
-pooja   23
-cherry  11
+pooja 23
+cherry 11
